@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './globalStyle';
 import Home from 'containers/Home';
 import registerServiceWorker from './registerServiceWorker';
 import {Provider} from 'react-redux';

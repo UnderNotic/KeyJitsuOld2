@@ -1,9 +1,7 @@
-import {createStore, combineReducers} from 'redux';
-import mainReducer from 'containers/Main/indexDuck';
+import {createStore} from 'redux';
+import createReducer from './reducers';
 
 export default function configureStore(){
-    const reducers = combineReducers({
-        mainReducer
-    });
+    const reducers = createReducer();
     return createStore(reducers);
 }
