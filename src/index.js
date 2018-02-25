@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import "jquery";
 import "popper.js";
 import "bootstrap";
+import 'bootstrap/dist/css/bootstrap.css'
 import "./globalStyle";
 import Main from "containers/Main";
 import registerServiceWorker from "./registerServiceWorker";
