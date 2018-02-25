@@ -1,24 +1,14 @@
 import React from "react";
-import { connect } from "react-redux";
-import { toggle } from "./indexDuck";
+import { NavLink } from "react-router-dom";
 
-export const App = ({ dispatch, isToggled }) => {
+export default ({ dispatch, isToggled }) => {
   return (
-    <div>
-      <button onClick={() => dispatch(toggle())} data-test="btn">
-        Test Button
-      </button>
-      {isToggled.toString()}
+    <div className="container-fluid">
+      <div className="row">
+        <div className="col-sm">One of three columns</div>
+        <div className="col-sm">One of three columns</div>
+        <div className="col-sm">One of three columns</div>
+      </div>
     </div>
   );
 };
-
-function mapStateToProps(state) {
-  const { mainReducer } = state;
-  const { isToggled } = mainReducer;
-  return {
-    isToggled
-  };
-}
-
-export default connect(mapStateToProps)(App);
